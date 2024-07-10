@@ -58,7 +58,7 @@ const ReferEarn = () => {
           className="w-full max-w-6xl md:max-w-4xl lg:max-w-3xl"
         />
       </div>
-      <button className="bg-blue-600 text-white py-2 px-6 rounded">
+      <button onClick={handleOpenModal} className="bg-blue-600 text-white py-2 px-6 rounded">
         Refer Now
       </button>
     </div>
