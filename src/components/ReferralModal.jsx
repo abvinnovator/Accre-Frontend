@@ -26,6 +26,14 @@ const ReferralModal = ({ isOpen, onClose }) => {
     } else if (!/\S+@\S+\.\S+/.test(formData.refereeEmail)) {
       formErrors.refereeEmail = 'Invalid email address';
     }
+
+    if (formData.referrerName === formData.refereeName) {
+      formErrors.refereeName = 'Friend\'s name should be different from your name';
+    }
+    if (formData.referrerEmail === formData.refereeEmail) {
+      formErrors.refereeEmail = 'Friend\'s email should be different from your email';
+    }
+
     return formErrors;
   };
 
