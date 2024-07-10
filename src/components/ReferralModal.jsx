@@ -41,7 +41,7 @@ const ReferralModal = ({ isOpen, onClose }) => {
     } else {
       setErrors({});
       try {
-        const response = await axios.post('http://localhost:3000/api/referrals', formData);
+        const response = await axios.post('https://accr-backend.onrender.com/api/referrals', formData);
         setSuccessMessage(response.data.message);
         setTimeout(() => {
           onClose();
